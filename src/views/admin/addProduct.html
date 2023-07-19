@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>HKP Shop</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/assets/img/logo-no-background.png" rel="icon">
+    <link href="/assets/img/logo-no-background.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="/admin" class="logo d-flex align-items-center">
+            <img src="/assets/img/logo-no-background.png" alt="" style="zoom: 2">
+            <span class="d-none d-lg-block ps-2">HKP Shop</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+            <li class="nav-item d-block d-lg-none">
+                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                    <i class="bi bi-search"></i>
+                </a>
+            </li><!-- End Search Icon-->
+
+            <li class="nav-item dropdown pe-3">
+
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <img src="/assets/img/hkp-logo.png" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">{adminName1}</span>
+                </a><!-- End Profile Iamge Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>{adminName2}</h6>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="/login">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Đăng Xuất</span>
+                        </a>
+                    </li>
+
+                </ul><!-- End Profile Dropdown Items -->
+            </li><!-- End Profile Nav -->
+
+        </ul>
+    </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="/admin">
+                <i class="bi bi-grid"></i>
+                <span>Danh Mục</span>
+            </a>
+        </li><!-- End Home Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                <i class="ri-bear-smile-line"></i><span>Quản Lý Sản Phẩm</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/admin/productManager">
+                        <i class="bi bi-circle"></i><span>Danh Sách Sản Phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/productManager/addProduct">
+                        <i class="bi bi-circle"></i><span>Thêm Mới Sản Phẩm</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-file-person"></i><span>Quản Lý Khách Hàng</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/admin/userManager">
+                        <i class="bi bi-circle"></i><span>Danh Sách Khách Hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/userManager/addUser">
+                        <i class="bi bi-circle"></i><span>Thêm Mới Khách Hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>Quản Lý Đơn Hàng</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/admin/orderManager">
+                        <i class="bi bi-circle"></i><span>Danh Sách Đơn Hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul><!-- End Components Nav -->
+
+</aside><!-- End Sidebar-->
+
+<main id="main" class="main">
+
+    <section class="section profile">
+        <div class="row justify-content-center">
+
+            <div class="col-xl-8">
+
+                <div class="card">
+                    <div class="card-body pt-3">
+                        <!-- Bordered Tabs -->
+                        <ul class="nav nav-tabs nav-tabs-bordered">
+
+                            <li class="nav-item">
+                                <h3>Thêm Mới Sản Phẩm</h3>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-2">
+
+                            <div class="tab-pane fade profile-edit pt-3" id="profile-edit"></div>
+
+                        </div>
+
+                        <!-- Profile Edit Form -->
+                        <form action="" method="post">
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-lg-3 col-form-label">Ảnh Sản Phẩm</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <div class="pt-2">
+                                        <label class="form-label" for="customFile">Chọn URL</label>
+                                        <input type="file" name="pImg" oninput="uploadImg()" class="form-control"
+                                               id="customFile">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="pName" class="col-md-4 col-lg-3 col-form-label">Tên Sản Phẩm</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <input name="pName" type="text" class="form-control" id="pName" value="">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="pType" class="col-md-4 col-lg-3 col-form-label">Loại Sản Phẩm</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <select class="form-select" name="pCode" aria-label="select-product">
+                                        <option selected value="1">Chọn Loại Sản Phẩm</option>
+                                        <option value="1">Gấu Bông Cao Cấp</option>
+                                        <option value="2">Gấu Bông Khổng Lồ</option>
+                                        <option value="3">Gấu Bông Cho Bé</option>
+                                        <option value="4">Gấu Bông Nhỏ</option>
+                                        <option value="5">Thỏ Bông</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="about" class="col-md-4 col-lg-3 col-form-label">Mô Tả</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <textarea name="pDesc" class="form-control" id="about"
+                                              style="height: 80px"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="pPrice" class="col-md-4 col-lg-3 col-form-label">Giá Sản Phẩm</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <input name="pPrice" type="text" class="form-control" id="pPrice" value="">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="pQuantity" class="col-md-4 col-lg-3 col-form-label">Số Lượng</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <input name="pQuantity" type="text" class="form-control" id="pQuantity" value="">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="pSize" class="col-md-4 col-lg-3 col-form-label">Size</label>
+                                <div class="col-md-8 col-lg-9">
+                                    <input name="pSize" type="text" class="form-control" id="pSize" value="">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Thêm Sản Phẩm</button>
+                            </div>
+                        </form><!-- End Profile Edit Form -->
+
+                    </div>
+                </div><!-- End Bordered Tabs -->
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</main><!-- End #main -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/chart.js/chart.umd.js"></script>
+<script src="/assets/vendor/echarts/echarts.min.js"></script>
+<script src="/assets/vendor/quill/quill.min.js"></script>
+<script src="/assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="/assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/js/main.js"></script>
+<script>
+    function uploadImg() {
+        let dirImg = '/assets/img/productImage/'
+        let imgPath = document.getElementById('customFile').value;
+        let imgArr = imgPath.split('\\');
+        let imgUpdate = dirImg + imgArr[2];
+        return imgUpdate;
+    }
+</script>
+</body>
+</html>
